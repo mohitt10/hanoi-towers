@@ -24,6 +24,7 @@ public class TowerInterfaceGUI extends JPanel {
         restartButton.addActionListener(e -> {
             gameState = new GameState(gameState.getNumDisks());
             repaint();
+            System.out.println("Game Restarted");
         });
 
         // Setup input fields and labels for manual moves (expected format: "from to")
