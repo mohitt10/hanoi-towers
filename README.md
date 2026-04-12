@@ -3,8 +3,8 @@
 A Java console-based graphical implementation of the classic Towers of Hanoi puzzle. 
 
 This repository is split into two distinct branches:
-- **`CLI-version`**: Text-based interactive command-line implementation (current branch).
-- **`GUI-version`**: Graphical user interface implementation.
+- **`CLI-version`**: Text-based interactive command-line implementation.
+- **`GUI-version`**: Graphical user interface implementation (current branch).
 
 ## How to Play (CLI Version)
 
