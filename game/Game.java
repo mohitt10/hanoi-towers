@@ -8,8 +8,8 @@ public class Game {
 
         int numDisks = -1;
 
-        while (numDisks < 4 || numDisks > 9) {
-            String input = JOptionPane.showInputDialog(null, "Enter number of disks (4 to 9):");
+        while (numDisks < 2 || numDisks > 9) {
+            String input = JOptionPane.showInputDialog(null, "Enter number of disks (2 to 9):");
 
             if (input == null) {
                 System.exit(0);
