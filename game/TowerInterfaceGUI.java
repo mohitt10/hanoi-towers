@@ -47,6 +47,10 @@ public class TowerInterfaceGUI extends JPanel {
         ActionListener performMove = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if(gameState != null && gameState.isGameWon()) {
+                    moveInput.setText("");
+                    return;
+                }
                 String input = moveInput.getText().trim();
                 String[] parts = input.split("\\s+"); // Splits "1 3" into ["1", "3"]
 
