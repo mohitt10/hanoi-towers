@@ -2,3 +2,8 @@
 .idea/
 *.iml
 out/
+
+#auto-generated emacs files
+
+*~\#*\#
+
