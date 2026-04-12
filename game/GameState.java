@@ -44,7 +44,11 @@ public class GameState {
             Stack<Integer> fromTower = towers.get(a - 1);
             Stack<Integer> toTower = towers.get(b - 1);
             toTower.push(fromTower.pop());
+            System.out.println("Moved disk from tower " + a + " to tower " + b);
             return true;
+        }
+        else {
+            System.out.println("Error: Move Invalid!");
         }
         return false;
     }
