@@ -1,15 +1,15 @@
-# Towers of Hanoi
+# Towers of Hanoi (GUI Version)
 
-A Java console-based graphical implementation of the classic Towers of Hanoi puzzle. 
+A Java Graphical User Interface (GUI) implementation of the classic Towers of Hanoi puzzle.
 
 This repository is split into two distinct branches:
+- **`GUI-version`**: Graphical user interface implementation utilizing Java Swing (current branch).
 - **`CLI-version`**: Text-based interactive command-line implementation.
-- **`GUI-version`**: Graphical user interface implementation (current branch).
 
-## How to Play (CLI Version)
+## How to Play (GUI Version)
 
 ### Compilation & Execution
-The project uses a standard `Makefile` for compilation and execution. Ensure you have the Java Development Kit (JDK) installed and then run:
+The project uses a standard `Makefile` for compilation and execution. Ensure you have the Java Development Kit (JDK) installed, and then run:
 
 ```bash
 make run
@@ -18,16 +18,17 @@ make run
 *Note: You can clean up the compiled binary files at any time using `make clean`.*
 
 ### Game Flow & Controls
-1. Once the game starts, you will be asked to input the **number of disks** to play with.
-2. An ASCII-art representation of the three towers will appear on your screen.
-3. On every turn, you will be sequentially prompted to input:
-   - The **rod to take a disk from**
-   - The **rod to place the disk on**
+1. **Initial Setup:** Once the game starts, a dialog box will prompt you to input the **number of disks** to play with (between 2 and 9).
+2. **Main Interface:** The main window will launch, presenting a graphical view of the three poles, a wooden base, and randomized brightly colored disks.
+3. **Making a Move:** Use the input field at the top of the window labeled `Move (e.g., 1 3):`
+   - Type your move in the format: `SourceRod DestinationRod` (separated by a space).
+   - *Example: In order to move the top disk from the first rod over to the third rod, type `1 3`.*
+   - Press the **Enter** key or click the **Submit** button to execute the move.
+4. **Restarting:** You can reset the game board at any time by clicking the **Restart** button located in the top-left corner.
 
-For inputting your moves, use the following mapping:
-- `1` = Left Rod
-- `2` = Middle Rod
-- `3` = Right Rod
+### Graphical Features
+- **Dynamic Resizing:** The disk widths mathematically scale based on the total number of disks you choose to play with. Each disk also features a gradient filling and dynamically centered numbering.
+- **Victory Screen Overlay:** A translucent dimming effect and a bright yellow "WELL DONE!" message drops onto the screen the moment you conquer the puzzle.
 
 ### Rules
 1. Only **one disk** can be moved at a time.
@@ -35,7 +36,4 @@ For inputting your moves, use the following mapping:
 3. A **larger disk** cannot be placed on top of a **smaller disk**.
 
 ### Goal
-Successfully relocate the entire stack of disks from the first rod to the last rod (Rod 3). Once solved, you will be congratulated and asked if you want to play another round!
-
-## Architecture Details
-Under the hood, the game relies on basic data structures: each of the three rods is implemented as a `Stack<Integer>`. Pushing and popping disks from these stacks allows the game to efficiently validate moves checking that no disk is pushed onto a stack possessing a smaller top element.
+Successfully relocate the entire stack of disks from the first rod to the last rod (Rod 3).
