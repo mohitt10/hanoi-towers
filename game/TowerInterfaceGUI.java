@@ -17,7 +17,7 @@ public class TowerInterfaceGUI extends JPanel {
         this.gameState = state;
         this.setLayout(null); // Absolute positioning for UI elements
 
-        // --- 1. RESTART BUTTON ---
+        // restart button for in between or after the game is finished
         JButton restartButton = new JButton("Restart");
         restartButton.setBounds(20, 20, 100, 35);
         restartButton.setFocusable(false);
@@ -32,7 +32,6 @@ public class TowerInterfaceGUI extends JPanel {
             }
         });
 
-        // --- 2. TEXT BOX FOR MOVES (a b) ---
         JLabel instructionLabel = new JLabel("Move (e.g., 1 3):");
         instructionLabel.setBounds(140, 20, 120, 35);
         instructionLabel.setFont(new Font("Arial", Font.BOLD, 14));
