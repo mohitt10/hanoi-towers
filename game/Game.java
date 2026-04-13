@@ -13,6 +13,11 @@ public class Game {
 
 	    Utils.clearScreen();
 
+	    if ((numDisks <= 0) || (numDisks > 20)) {
+		System.out.println("Number of disks should be greater than 0 and less than 21");
+		continue;
+	    }
+	    
 	    GameState currState = new GameState(numDisks);
 
 	    while (!currState.isGameWon()) {
